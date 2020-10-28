@@ -1,8 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-
-
 // variables for password generator
 var letters = "abcdefghijklmnopqrstuvwxyz";
 var numbers = [0, 1, 2, 4, 5, 6, 7, 8, 9]; //dont need this most likely
@@ -17,18 +15,11 @@ function getRandomChar(arr) {
   return arr[getRandom];
 }
 
-// change string to array so characters can be replaced 
-var stringToArray = letters.split("");
-console.log(getRandomChar(stringToArray));
-
 //testing output
-console.log(getRandomChar(letters));
-console.log(getRandomChar(numbers));
-console.log(getRandomChar(specials));
-console.log(getRandomChar(letters).toUpperCase());
-
-
-
+//console.log(getRandomChar(letters));
+//console.log(getRandomChar(numbers));
+//console.log(getRandomChar(specials));
+//console.log(getRandomChar(letters).toUpperCase());
 
 // Prompt the customer for password criteria
   //length between 8-124 characters
@@ -73,7 +64,7 @@ function generatePassword() {
         } 
       }
       else {
-        alert("you made it to else UC");
+        //alert("you made it to else UC");
         for(i=0; i< howLong; i++) {
           if(i%2 === 0 && i < howLong) {
           password[i] = getRandomChar(letters).toUpperCase();
@@ -89,7 +80,7 @@ function generatePassword() {
         }
       }
       else {
-        alert("you made it to else numbers");
+        //alert("you made it to else numbers");
         for(i=0; i< howLong; i++) {
           if(i%3 === 0 && i < howLong) {
           password[i] = getRandomChar(numbers);
@@ -105,7 +96,7 @@ function generatePassword() {
           }
         }
         else {
-          alert("you made it to else special");
+          //alert("you made it to else special");
           for(i=0; i< howLong; i++) {
             if(i%4 === 0 && i < howLong) {
             password[i] = getRandomChar(specials);
