@@ -17,6 +17,14 @@ function getRandomChar(arr) {
   return arr[getRandom];
 }
 
+function stringToArray(str) {
+  var stringArray= stringArray[str.length];
+  for(i=0; i< str.length; i++) {
+    stringArray[i]= i;
+  }
+  return stringArray;
+}
+
 //testing output
 console.log(getRandomChar(letters));
 console.log(getRandomChar(numbers));
@@ -33,6 +41,7 @@ console.log(getRandomChar(letters).toUpperCase());
 
 function generatePassword() {
   var atleastOne = true; // validates if user picked atleast one character type
+  var password = "";
   while(atleastOne === true) {
     var howLong = prompt("How long do you want your password to be? (between 8-128 characters)");
     // makes sure input is between 8-128 before continuing 
@@ -52,10 +61,27 @@ function generatePassword() {
       alert("You must choose atleast one character type for your password. Click generate password to retry.");
       atleastOne = false;
     }
-    else if(confirmLCLetters === false) {
-
+    else if(confirmLCLetters === true) {
+      for(i=0; i< howLong; i++) {
+        password = password + getRandomChar(letters);
+      } 
     }
-    
+    else if(confirmUCLetters === true) {
+      if(confirmLCLetters === false) {
+        for(i=0; i< howLong; i++) {
+          password = password + getRandomChar(letters).toUpperCase();
+        } 
+      }
+      else {
+        for(i=0; i< howLong; i+2) {
+         
+        } 
+      }
+    }
+
+
+    console.log(password);
+
     atleastOne = false;
     
   } 
@@ -73,6 +99,8 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+/*
 for(i=0; i< specials.length; i++) {
   console.log(specials[i]);
 }
+*/
