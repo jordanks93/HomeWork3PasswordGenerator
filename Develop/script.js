@@ -38,6 +38,7 @@ console.log(getRandomChar(letters).toUpperCase());
 function generatePassword() {
   var atleastOne = true; // validates if user picked atleast one character type
   var password = [];
+  var passwordString = "";
   while(atleastOne === true) {
     var howLong = prompt("How long do you want your password to be? (between 8-128 characters)");
     
@@ -100,7 +101,7 @@ function generatePassword() {
     if(confirmSpecials === true) {
       if(confirmLCLetters === false && confirmUCLetters === false && confirmNumbers === false) {
         for(i=0; i< howLong; i++) {
-          password[i] = getRandomChar(numbers);
+          password[i] = getRandomChar(specials);
           }
         }
         else {
@@ -112,35 +113,11 @@ function generatePassword() {
           } 
         }
       }
-
-    /*
-    else if(confirmUCLetters === true) {
-      if(confirmLCLetters === false) {
-        for(i=0; i< howLong; i++) {
-          password[i] = getRandomChar(letters).toUpperCase();
-        } 
-      }
-      else {
-        alert("you made it to else UC");
-        for(j=0; j< password.length; j+2) {
-          password[j] = getRandomChar(letters).toUpperCase();
-        } 
-      } 
-    }
-    else if(confirmNumbers === true) {
-      if(confirmLCLetters === false && confirmUCLetters === false) {
-        for(i=0; i< howLong; i++) {
-          password[i] = getRandomChar(numbers);
-        } 
-      }
-      else {
-        alert("you made it to else numbers");
-        for(j=0; j< howLong; j++) {
-          password[j] = getRandomChar(numbers);
-        } 
-      } 
-    } 
-    */
+    
+    
+    for (i=0; i< howLong; i++) {
+      passwordString += password[i];
+    } return passwordString;
    console.log(password);
    atleastOne = false;
   }
