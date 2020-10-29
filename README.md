@@ -8,13 +8,13 @@
 * generatePassword function
 
   * Prompt the customer for password criteria
-   * length between 8-124 characters
-   * character types: lowercase, uppercase, numeric, and/or special characters
-   * atleast one character type should be selected, else prompt again
+    * length between 8-124 characters
+    * character types: lowercase, uppercase, numeric, and/or special characters
+    * atleast one character type should be selected, else prompt again
    
   * Create a  password based on user criteria
-   * Build password with for-loops and array
-   * Convert array to string value for return output
+    * Build password with for-loops and array
+    * Convert array to string value for return output
  
     
 
