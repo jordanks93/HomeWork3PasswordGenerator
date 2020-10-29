@@ -44,6 +44,7 @@ function generatePassword() {
     else {
       alert("You must choose a password length between 8 and 128 characters. Click generate password to retry.");
       atleastOne = false // Ends the loop and directs user to retry if input is not between 8-128
+      return "Your Secure Password"; // Makes sure display remains the same if password array is undefined
     }
     
     if(confirmUCLetters === false && confirmLCLetters === false && confirmNumbers === false && confirmSpecials === false) {
@@ -54,66 +55,65 @@ function generatePassword() {
 
     // Runs if user wants lowercase letters
     if(confirmLCLetters === true) {
-      for(i=0; i< howLong; i++) {
+      for(i=0; i< howLong; i++) { // Creates array with random lowercase letters
         password[i] = getRandomChar(letters);
       }
     }
     // Runs if user wants uppercase letters
     if(confirmUCLetters === true) {
       // Runs if user only wants uppercase letters
-      if(confirmLCLetters === false) {
-        for(i=0; i< howLong; i++) {
+      if(confirmLCLetters === false) { 
+        for(i=0; i< howLong; i++) { // Creates array with random uppercase letters
           password[i] = getRandomChar(letters).toUpperCase();
         } 
       }
       else {
         //alert("you made it to else UC");
-        for(i=0; i< howLong; i++) {
+        for(i=0; i< howLong; i++) { // Replaces a character at every 2 index places with a random uppercase letter
           if(i%2 === 0 && i < howLong) {
           password[i] = getRandomChar(letters).toUpperCase();
           }
         } 
       } 
     }
-
+    // Runs if user wants numbers
     if(confirmNumbers === true) {
       if(confirmLCLetters === false && confirmUCLetters === false) {
-      for(i=0; i< howLong; i++) {
-        password[i] = getRandomChar(numbers);
+      for(i=0; i< howLong; i++) { // Creates array with random numbers
+        password[i] = getRandomChar(numbers); 
         }
       }
       else {
         //alert("you made it to else numbers");
-        for(i=0; i< howLong; i++) {
+        for(i=0; i< howLong; i++) { // Replaces a character at every 3 index places with a random number
           if(i%3 === 0 && i < howLong) {
           password[i] = getRandomChar(numbers);
           }
         } 
       }
     }
-
+    // Runs if user wants special characters
     if(confirmSpecials === true) {
       if(confirmLCLetters === false && confirmUCLetters === false && confirmNumbers === false) {
-        for(i=0; i< howLong; i++) {
+        for(i=0; i< howLong; i++) { // Creates array with random special characters
           password[i] = getRandomChar(specials);
           }
         }
         else {
           //alert("you made it to else special");
-          for(i=0; i< howLong; i++) {
+          for(i=0; i< howLong; i++) { // Replaces a character at every 4 index places with a random special character
             if(i%4 === 0 && i < howLong) {
             password[i] = getRandomChar(specials);
             }
           } 
         }
       }
-    
-    
+    // Creates a string with the completed array 
     for (i=0; i< howLong; i++) {
       passwordString += password[i];
-    } return passwordString;
-   console.log(password);
-   atleastOne = false;
+    } return passwordString; 
+   //console.log(password);
+   atleastOne = false; // Ends the loop once password is completed
   }
 }
 
