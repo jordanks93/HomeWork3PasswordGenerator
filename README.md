@@ -6,6 +6,7 @@
   * Pulls random character from an array or string
   
 * generatePassword function
+
   * Prompt the customer for password criteria
    * length between 8-124 characters
    * character types: lowercase, uppercase, numeric, and/or special characters
