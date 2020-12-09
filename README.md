@@ -2,6 +2,10 @@
 
 ### Description: Provide the user a password generator that will create a randomized password of their choosing. The password can be 8-128 characters long. The following charcter types can be created: lowercase letters, uppercase letters, numbers and special characters (!@#$...etc).
 
+# Technologies Used:
+ * HTML
+ * Javascript
+
 * getRandomChar function
   * Pulls random character from an array or string
   
@@ -15,10 +19,6 @@
   * Create a  password based on user criteria
     * Build password with for-loops and array
     * Convert array to string value for return output
- 
-    
-
-
 
 ## Visual:
 ![Default Page](./Assets/DefaultPage.JPG)
@@ -30,3 +30,7 @@
 
 ## Author: 
 Jordan Stuckman
+
+## License:
+[MIT](./license/license.txt)
+
