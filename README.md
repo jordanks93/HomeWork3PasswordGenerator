@@ -1,4 +1,4 @@
-# Project Name: HomeWork3 Password Generator
+# Project Name: Password Generator
 
 ### Description: Provide the user a password generator that will create a randomized password of their choosing. The password can be 8-128 characters long. The following charcter types can be created: lowercase letters, uppercase letters, numbers and special characters (!@#$...etc).
 
