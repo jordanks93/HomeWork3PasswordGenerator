@@ -25,7 +25,7 @@
 
 ![Output Page](./Assets/OutputPage.JPG)
 
-[Gitpages Link](https://jordanks93.github.io/HomeWork3PasswordGenerator/)
+[Gitpages Link](https://jordanks93.github.io/PasswordGenerator/)
 
 
 ## Author: 
